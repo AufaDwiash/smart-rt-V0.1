@@ -1,0 +1,53 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration {
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('aduan', function (Blueprint $table) {
+            $table->id();
+
+            $table->foreignId('user_id')
+                ->constrained('users')
+                ->onDelete('cascade');
+
+            $table->string('judul');
+
+            $table->text('isi_aduan');
+
+            $table->string('foto_aduan')->nullable();
+
+            $table->enum('kategori', [
+                'keamanan',
+                'kebersihan',
+                'fasilitas',
+                'kebisingan',
+                'lainnya'
+            ])->default('lainnya');
+
+            $table->enum('status', [
+                'pending',
+                'diproses',
+                'selesai'
+            ])->default('pending');
+
+            $table->text('tanggapan_rt')->nullable();
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('aduan');
+    }
+};

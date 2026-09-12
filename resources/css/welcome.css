@@ -1,0 +1,141 @@
+body {
+    font-family: sans-serif;
+}
+
+/* Container */
+.container-custom {
+    @apply max-w-screen-xl mx-auto px-4;
+}
+
+/* Navbar */
+.navbar {
+    @apply bg-white border-b shadow-sm;
+}
+
+.navbar .container-custom {
+    @apply py-4 flex items-center justify-between;
+}
+
+.logo {
+    @apply text-2xl font-bold text-blue-600;
+}
+
+.nav-action {
+    @apply flex items-center gap-3;
+}
+
+.nav-login {
+    @apply text-gray-700 hover:text-blue-600 font-medium transition;
+}
+
+/* Buttons */
+.btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-semibold transition shadow-md;
+}
+
+.btn-secondary {
+    @apply bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 px-5 py-3 rounded-xl font-semibold transition;
+}
+
+/* Hero */
+.hero-section {
+    @apply py-20;
+}
+
+.hero-grid {
+    @apply grid md:grid-cols-2 gap-10 items-center;
+}
+
+.badge {
+    @apply bg-blue-100 text-blue-700 text-sm font-medium px-4 py-2 rounded-full;
+}
+
+.hero-title {
+    @apply mt-6 text-5xl font-extrabold text-gray-900 leading-tight;
+}
+
+.hero-description {
+    @apply mt-6 text-lg text-gray-600 leading-relaxed;
+}
+
+.hero-button-group {
+    @apply mt-8 flex gap-4;
+}
+
+/* Card */
+.stat-card {
+    @apply bg-white rounded-3xl shadow-xl p-8;
+}
+
+.stat-grid {
+    @apply grid grid-cols-2 gap-6;
+}
+
+.stat-item {
+    @apply rounded-2xl p-5;
+}
+
+.stat-item h3 {
+    @apply text-4xl font-bold;
+}
+
+.stat-item p {
+    @apply mt-2 text-gray-600;
+}
+
+.blue {
+    @apply bg-blue-50;
+}
+
+.blue h3 {
+    @apply text-blue-600;
+}
+
+.green {
+    @apply bg-green-50;
+}
+
+.green h3 {
+    @apply text-green-600;
+}
+
+.yellow {
+    @apply bg-yellow-50;
+}
+
+.yellow h3 {
+    @apply text-yellow-600;
+}
+
+.purple {
+    @apply bg-purple-50;
+}
+
+.purple h3 {
+    @apply text-purple-600;
+}
+
+/* Modal */
+.modal-header {
+    @apply flex items-center justify-between p-5 border-b;
+}
+
+.modal-title {
+    @apply text-2xl font-bold text-gray-900;
+}
+
+.modal-close {
+    @apply text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 flex justify-center items-center;
+}
+
+.modal-body {
+    @apply p-6;
+}
+
+.modal-text {
+    @apply text-gray-600 text-lg;
+}
+
+.modal-footer {
+    @apply flex items-center p-5 border-t;
+}
